@@ -3,6 +3,33 @@
         "post_id": 1,
         "title": "First Blog Post",
         "author": "Paul Niemczyk",
-        "body": "These student devs keep getting younger and smarter"
+        "body": "These student devs keep getting younger and smarter",
+        "comments": [
+            {"id": 1, "text": "First comment on first post"},
+            {"id": 2, "text": "Second comment on first post"}
+        ]
+    },
+    {
+        "post_id": 2,
+        "title": "Second Blog Post",
+        "author": "April Whitbourn",
+        "body": "I want to be younger and smarter",
+        "comments": [
+            {"id": 3, "text":"First comment on second post"},
+            {"id": 4, "text": "Second comment on second post"}
+        ]
+    },
+
+    {
+        "post_id": 3,
+        "title": "Third Blog Post",
+        "author":"Gandalf",
+        "body": "Fool of a Took",
+        "comments":[
+            {"id": 5, "text":"First comment on third post"},
+            {"id": 6, "text":"Second comment on third post"}
+        ]
     }
 ]
+
+
