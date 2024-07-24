@@ -1,5 +1,5 @@
 const express = require('express');
-const commentRoutes = require('./package.jsonroutes');
+const commentRoutes = require('./controllers/routes');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -11,11 +11,5 @@ app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
 
-const routes = require('./routes');
 
-// Middleware to parse JSON bodies
-app.use(express.json());
-
-// Mount routes
-app.use('/', routes);
 

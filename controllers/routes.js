@@ -29,7 +29,6 @@ const commentController = reuire('../controllers/commentController');
 
 router.get('/', commentController.getAllComments);
 
-module.exports = router;
 
 //function to read data from json file
 function readDataFromFile(callback) {
