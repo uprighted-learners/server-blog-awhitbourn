@@ -23,12 +23,10 @@ module.exports = {
 };
 
 const express = require('express');
-const { error } = require('console');
+const fs = require('fs');
+const {error} = require('console');
 const router = express.Router();
-const commentController = reuire('../controllers/commentController');
-
-router.get('/', commentController.getAllComments);
-
+const commentController = require('../controllers/commentController');
 
 //function to read data from json file
 function readDataFromFile(callback) {
@@ -48,17 +46,20 @@ function readDataFromFile(callback) {
         }
         })
     }
+// Route to get all comments
+router.get('/', commentController.getAllComments);
 
-    //Route to get a comment by post_id
+
+//Route to get a comment by post_id
 router.get('/api/comments/:post_id', (req,res) => {
-    const postID = path.parseINT(req.params.post_id);
+    const postID = path.parseInt(req.params.post_id);
 
     readDataFromFile(data => {
         //post with matching post_id
         const post = data.find(post => post.post_id === postID);
 
         if (!post) {
-            res.status(404).json({error: 'Post no found'});
+            res.status(404).json({error: 'Post not found'});
             return;
         }
 
